@@ -25,7 +25,7 @@ def find(data, query):
         if query in line:
             query_index = data.index(line)
             break
-    return(query_index)
+    return query_index
 
 target_index = find(data, query)
 
@@ -41,7 +41,7 @@ def toggle(data, target_index):
         target_update = '#' + target
         data[target_index] = target_update
         print("Toggled on.\n")
-    return(data)
+    return data
 
 with open(path, "w") as hosts_file:
     toggle(data, target_index)
